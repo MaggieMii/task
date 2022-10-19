@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box{background-color: #ccc;
+        width: 500px;
+        height: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        justify-content: space-between;}
+        #round1{width: 50px;
+        height: 50px;
+        background-color: #fc0;
+        border-bottom-right-radius: 50px;}
+        #round2{width: 50px;
+        height: 50px;
+        background-color: #fc0;
+        border-top-left-radius: 50px;
+        align-self:flex-end;}
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="round1"></div>
+        <div id="round2"></div>
+    </div>
+</body>
+</html>

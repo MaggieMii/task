@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #father{
+            height: 30px;
+            display: flex;
+            width: 500px;
+            flex-wrap: nowrap;
+            text-align: center;
+        }
+        #son1{height: 30px;
+        background-color: red;
+        width: 100px;}
+        #son2{height: 30px;
+        background-color: yellow;
+        flex: 1;}
+        #son3{height: 30px;
+        background-color: blue;
+        width: 100px;}
+        #father2{
+            height: 30px;
+            display: flex;
+            width: 500px;
+            flex-wrap: nowrap;
+            text-align: center;
+        }
+        #son4{height: 30px;
+        background-color: red;
+        flex: 1;}
+        #son5{height: 30px;
+        background-color: yellow;
+        width: 300px;}
+        #son6{height: 30px;
+        background-color: blue;
+        flex: 1;}
+
+    </style>
+</head>
+<body>
+    <div id="father">
+    <div id="son1"></div>
+    <div id="son2"></div>
+    <div id="son3"></div>
+    </div>
+    <br><br>
+    <div id="father2">
+        <div id="son4"></div>
+        <div id="son5"></div>
+        <div id="son6"></div>
+        </div>
+</body>
+</html>
