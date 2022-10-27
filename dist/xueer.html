@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{margin: 0;}
+        .wrapper{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .wrapper > * {
+        padding: 10px;
+        flex: 1 100%;
+        }
+        .aside{ flex: 1 0 0; }
+        .article{ flex: 3 0px; }
+        .header{
+            background-color:white;
+            display: flex;
+            align-items: center;
+            height: 50px;
+            border-bottom: 1px solid #f5f5f5;
+            justify-content: center;
+            width: 100%;
+        }
+        .header2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        #xueer{
+        color:#1dc091;
+        font-size: 25px;
+        }
+        #zero{width: 30px;}
+        .headfont{
+        font-size: smaller;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        }
+        .line{
+            height: 3px;   
+        }
+        .headfont:hover{color: red;}
+        .headfont:hover>.line{background-color: red;}
+        input{
+            outline: 2px solid red;
+            outline-offset: -1px;
+         }
+        button{
+                background-color: #1dc091;
+                border: 0px;
+                color: white;
+                width: 70px;
+                height: 25px;
+                font-size: 10px;
+        }
+        .aside{background-color:#f5f5f5;}
+        .aside1{order: 1;}
+        .aside2{order: 3;}
+        .article{
+            order: 2;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .footer{
+            order: 4;
+            background-color: #333333;
+        }
+        #radius1{
+                  width: 80px    ;             
+                  height: 80px;
+                 background-color: white;
+                 margin-bottom: auto;
+                 border-radius: 50%;  
+                 border: 2px solid #1dc091;
+                 display: flex;
+                 color: #1dc091;
+                 font-size: 35px;
+                 font-weight:lighter;
+                 justify-content: center;
+                 align-items: center;
+        }
+        .ge{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            width: 25%;
+            height: 350px;
+            margin-top: 25px;
+            }
+        .part{
+            width: 100%;
+            height: 400px;
+            background-color: white;
+        }
+        .part-1{
+                display: flex;
+                flex-direction: row;
+        }
+        font{
+            font-weight: lighter;
+            font-size: smaller;
+        }
+        ul{
+            border-right:darkgray solid 1px;
+            padding: 30px;
+        }
+        #uls{border-right: none;}
+        #radius2{
+                  width: 25px    ;             
+                  height: 25px;
+                 background-color: white;
+                 margin-bottom: auto;
+                 border-radius: 50%;  
+                 border: 2px solid #1dc091;
+                 display: flex;
+                 color: #1dc091;
+                 font-size: 20px;
+                 font-weight: 100;
+                 justify-content: center;
+                 align-items: center;
+              }
+            li:hover{color: red;}
+            .part-2{margin-top: 10px;}
+            p{
+                text-align: center;
+                width: 100%;font-weight: bold;
+            }
+            #font2{
+                color: #1dc091;
+                font-weight: bold;
+            }
+            .part2lilge{
+                        width: 150px;
+                        height: 120px;
+                        font-weight: light;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+            }
+            .part2lilge2:hover{
+                background-color: #1dc091;
+                color: white;
+            }
+            .part2lilge2{
+                border: #1dc091 solid 2px;
+                width: 150px;
+            }
+            #part2bigge{
+                display: flex;
+                width: 800px;
+                flex-wrap: wrap;
+                justify-content: center;
+        }
+            .part-2{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            span{
+                text-decoration: underline 3px;
+                color: red;
+                font-size: 60px;
+                font-weight: lighter;
+            }
+            .part3bigge{
+            width: 700px;
+            height: 125px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+            .part3lilge{
+                width: 150px;
+                height: 75px;
+                background-color: #f77b72;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-weight: lighter;
+            }
+            #rabbit{
+                height: 50px;
+                width: 150px;
+            }
+            .part-3{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                height: 300px;
+                margin-top: 10px;
+                padding-top: 25px;
+            }
+            #zuhe:hover>.part3lilge{background-color: red;}
+            #zuhe:hover>#rabbit{background-image:url(图片3.png);}
+            #pic4{border-bottom: #848484 solid 2px;}
+            #foot{
+                color: #848484;
+                font-weight: 400;
+                margin-top: 4px;
+            }
+            #spanfoot{
+                font-size:x-small;
+                color: #b54f5e;
+                font-weight:bolder;
+        }
+            footer{text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header2"><div id="logo"><img src="logo.png" alt="logo" width="auto"height="50px"></div>
+            <div id="xueer">学而</div>
+            <div id="zero"></div>
+            <div class="headfont">
+                <div class="line"></div>
+                <div class="fontson">首页</div>
+                <div></div>
+            </div>
+            <div id="zero"></div>
+            <div class="headfont">
+                <div class="line"></div>
+                <div class="fontson">分类查看</div> 
+                <div></div>
+            </div>
+            <div id="zero"></div>
+            <div id="zero"></div>
+            <input type="text"><img src="sousuo.png" alt="sousuo" height="24px">
+            <div id="zero"></div>
+            <img src="图案1.png" alt="图案1" height="45px" width="auto">
+            <button>退 &ensp; 出</button></div>
+        </header>
+        <aside class="aside aside1"></aside>
+        <aside class="aside aside2"></aside>
+        <article class="article">
+            <img src="图片2.png" alt="图片2">
+            <div class="part part-1">
+                <div class="ge">
+                    <div id="radius1">公</div>
+                    <ul>
+                        <li>界面与设计应用<br>
+                        <font>房子</font></li>
+                        <li>java程序编程<br>
+                        <font>赵三金</font></li>
+                        <li>设计师的自我修养<br>
+                        <font>分享课程</font></li>
+                    </ul>
+                    <div id="radius2">十</div>
+                </div>
+                <div class="ge">
+                    <div id="radius1">通</div>
+                    <ul>
+                        <li>计算机基础<br>
+                            <font>胡薇</font></li>
+                            <li>植物观赏学基础<br>
+                            <font>韩一尾</font></li>
+                            <li>生活常识101<br>
+                            <font>分享</font></li>
+                    </ul>
+                    <div id="radius2">十</div>
+                </div>
+                <div class="ge">
+                    <div id="radius1">素</div>
+                    <ul>
+                        <li>新生引导课堂<br>
+                            <font>开学季</font></li>
+                            <li>党课精神研讨课<br>
+                            <font>分享课程</font></li>
+                            <li>专业方向<br>
+                            <font>毕业生</font></li>
+                    </ul>
+                    <div id="radius2">十</div>
+                </div>
+                <div class="ge">
+                    <div id="radius1">专</div>
+                    <ul id="uls">
+                        <li>影视广告摄影基础<br>
+                            <font>分享课程</font></li>
+                            <li>程序员的养成<br>
+                            <font>赵多金</font></li>
+                            <li>如何让设计师改稿<br>
+                            <font>甲方</font></li>
+                    </ul>
+                    <div id="radius2">十</div>
+                </div>
+            </div>
+            <div class="part part-2">
+                <p>最热课程动态<br><font id="font2">精心为您推荐最佳口碑课程排行NO.1-NO.5</font></p>
+                <div id="part2bigge">
+                    <div class="part2lilge part2lilge2">常勇<br>《化学生活》</div>
+                    <div class="part2lilge part2lilge1"><span>02</span></div>
+                    <div class="part2lilge part2lilge2">张勇<br>《Java语言程序设计》</div>
+                    <div class="part2lilge part2lilge1"><span>04</span></div>
+                    <div class="part2lilge part2lilge2">张国 <br> 《计算机组装》</div>
+                    <div class="part2lilge part2lilge1"><span>01</span></div>
+                    <div class="part2lilge part2lilge2">李达<br>《大学生语文》</div>
+                    <div class="part2lilge part2lilge1"><span>03</span></div>
+                    <div class="part2lilge part2lilge2">苏燕<br>《视觉语言》</div>
+                    <div class="part2lilge part2lilge1"><span>05</span></div>
+                </div>
+            </div>
+            <div class="part part-3">
+                <p>猜你喜欢课程<br><font id="font2">根据您的浏览记录，推荐相似课程列表</font></p>
+                <div class="part3bigge">
+                    <div id="zuhe"><div id="rabbit"></div><div class="part3lilge">《毛泽东思想》<br>赵三金</div></div>
+                    <div id="zuhe"><div id="rabbit"></div><div class="part3lilge">《邓小平理论》<br>胡一微</div></div>
+                    <div id="zuhe"><div id="rabbit"></div><div class="part3lilge">《科学发展观》<br>梁非凡</div></div>
+                    <div id="zuhe"><div id="rabbit"></div><div class="part3lilge">《三个代表》<br>韩一尾</div></div>
+                </div>
+            </div>
+        </article>
+        <footer class="footer">
+            <img src="图片4.png" alt="图片4" id="pic4">
+            <p id="foot">M&nbsp;U&nbsp;X&nbsp;I &ensp; &nbsp;S&nbsp;T&nbsp;U&nbsp;D&nbsp;I&nbsp;O &ensp;<span id="spanfoot">|</span>&ensp;&nbsp;华中师范大学</p>
+        </footer>
+    </div>
+</body>
+</html>
